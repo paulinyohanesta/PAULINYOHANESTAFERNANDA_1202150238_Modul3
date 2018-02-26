@@ -1,4 +1,4 @@
-package com.adekraesa.android.PaulinYohanestaFernanda_1202150238_modul3;
+package com.example.win10.paulinyohanestafernanda_1202150238_modul3;
 
 import android.content.Intent;
 import android.os.Handler;
@@ -16,10 +16,10 @@ public class SplashScreen extends AppCompatActivity {
             @Override
             public void run() {
                 /* Create an Intent that will start the Menu-Activity. */
-                startActivity(new Intent(SplashScreen.this, LoginActivity.class));
+                startActivity(new Intent(SplashScreen.this, HalamanLogin.class));
                 finish();
             }
-        }, 1000);
+        }, 3000);
     }
 }
 

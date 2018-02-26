@@ -1,10 +1,12 @@
-package com.adekraesa.android.PaulinYohanestaFernanda_1202150238_modul3;
+package com.example.win10.paulinyohanestafernanda_1202150238_modul3;
 
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.DrawableRes;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 
-public class Drink {
+public class AirMinum {
     private String title;
     private String info;
     private int image;
@@ -13,7 +15,7 @@ public class Drink {
     static final String IMAGE_KEY = "Image Resource";
 
 
-    public Drink(String title, String info, int image) {
+    public AirMinum(String title, String info, int image) {
         this.title = title;
         this.info = info;
         this.image = image;
@@ -32,10 +34,11 @@ public class Drink {
     }
 
     public static Intent starter(Context context, String title, @DrawableRes int imageResId) {
-        Intent detailIntent = new Intent(context, DetailActivity.class);
+        Intent detailIntent = new Intent(context, DetailAirMinum.class);
         detailIntent.putExtra(TITLE_KEY, title);
         detailIntent.putExtra(IMAGE_KEY, imageResId);
 
         return detailIntent;
     }
 }
+

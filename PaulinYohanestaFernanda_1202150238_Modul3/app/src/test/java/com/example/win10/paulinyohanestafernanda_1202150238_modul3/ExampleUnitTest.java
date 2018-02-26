@@ -1,4 +1,4 @@
-package com.adekraesa.android.PaulinYohanestaFernanda_1202150238_modul3;
+package com.example.win10.paulinyohanestafernanda_1202150238_modul3;
 
 import org.junit.Test;
 

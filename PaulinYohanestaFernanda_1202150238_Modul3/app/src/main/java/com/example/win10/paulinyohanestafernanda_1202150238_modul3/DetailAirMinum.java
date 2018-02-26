@@ -1,4 +1,4 @@
-package com.adekraesa.android.PaulinYohanestaFernanda_1202150238_modul3;
+package com.example.win10.paulinyohanestafernanda_1202150238_modul3;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class DetailActivity extends AppCompatActivity {
+public class DetailAirMinum extends AppCompatActivity {
 
     private ImageView level;
     private TextView levelIndicator;
@@ -20,7 +20,7 @@ public class DetailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail);
+        setContentView(R.layout.activity_detail_air_minum);
 
         Intent intent = getIntent();
         TextView title = (TextView) findViewById(R.id.titleDetail);
@@ -79,3 +79,4 @@ public class DetailActivity extends AppCompatActivity {
         }
     }
 }
+

@@ -1,4 +1,4 @@
-package com.adekraesa.android.PaulinYohanestaFernanda_1202150238_modul3;
+package com.example.win10.paulinyohanestafernanda_1202150238_modul3;
 
 import android.content.res.TypedArray;
 import android.support.v7.app.AppCompatActivity;
@@ -6,13 +6,14 @@ import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
-    private ArrayList<Drink> mAirData;
-    private DrinkAdapter mAdapter;
+    private ArrayList<AirMinum> mAirData;
+    private AirMinumAdapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
         mAirData = new ArrayList<>();
 
-        mAdapter = new DrinkAdapter(this, mAirData);
+        mAdapter = new AirMinumAdapter(this, mAirData);
         mRecyclerView.setAdapter(mAdapter);
 
         initialiseData();
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         mAirData.clear();
 
         for (int i=0; i<airList.length; i++){
-            mAirData.add(new Drink (airList[i], airInfo[i], airImageResource.getResourceId(i, 0)));
+            mAirData.add(new AirMinum (airList[i], airInfo[i], airImageResource.getResourceId(i, 0)));
         }
 
         airImageResource.recycle();
@@ -50,3 +51,4 @@ public class MainActivity extends AppCompatActivity {
         mAdapter.notifyDataSetChanged();
     }
 }
+

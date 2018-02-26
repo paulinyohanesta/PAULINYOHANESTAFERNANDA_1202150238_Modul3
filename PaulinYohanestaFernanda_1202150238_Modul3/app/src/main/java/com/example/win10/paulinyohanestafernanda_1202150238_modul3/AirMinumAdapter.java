@@ -1,4 +1,4 @@
-package com.adekraesa.android.PaulinYohanestaFernanda_1202150238_modul3;
+package com.example.win10.paulinyohanestafernanda_1202150238_modul3;
 
 import android.content.Context;
 import android.content.Intent;
@@ -18,20 +18,20 @@ import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
-public class DrinkAdapter extends RecyclerView.Adapter<DrinkAdapter.AirViewHolder> {
+public class AirMinumAdapter extends RecyclerView.Adapter<AirMinumAdapter.AirViewHolder> {
 
     private GradientDrawable mGradient;
-    private ArrayList<Drink> mAirData;
+    private ArrayList<AirMinum> mAirData;
     private Context mContext;
 
-    DrinkAdapter(Context context, ArrayList<Drink> airData){
+    AirMinumAdapter(Context context, ArrayList<AirMinum> airData){
         this.mAirData = airData;
         this.mContext = context;
 
         mGradient = new GradientDrawable();
         mGradient.setColor(Color.GRAY);
 
-        Drawable drawable = ContextCompat.getDrawable(mContext, R.drawable.img_ades);
+        Drawable drawable = ContextCompat.getDrawable(mContext, R.drawable.ades);
         if (drawable!=null){
             mGradient.setSize(drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
         }
@@ -40,12 +40,12 @@ public class DrinkAdapter extends RecyclerView.Adapter<DrinkAdapter.AirViewHolde
 
     @Override
     public AirViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new AirViewHolder(mContext, LayoutInflater.from(mContext).inflate(R.layout.activity_list_item, parent, false), mGradient);
+        return new AirViewHolder(mContext, LayoutInflater.from(mContext).inflate(R.layout.activity_list_air_minum, parent, false), mGradient);
     }
 
     @Override
-    public void onBindViewHolder(DrinkAdapter.AirViewHolder holder, int position) {
-        Drink currentAir = mAirData.get(position);
+    public void onBindViewHolder(AirMinumAdapter.AirViewHolder holder, int position) {
+        AirMinum currentAir = mAirData.get(position);
 
         holder.bindTo(currentAir);
         Glide.with(mContext).load(currentAir.getImage()).into(holder.mAirImage);
@@ -62,7 +62,7 @@ public class DrinkAdapter extends RecyclerView.Adapter<DrinkAdapter.AirViewHolde
         private TextView mTitle;
         private TextView mInfo;
         private Context mContext;
-        private Drink mCurrentAir;
+        private AirMinum mCurrentAir;
         private GradientDrawable mGradient;
         private String txtTitle;
 
@@ -80,7 +80,7 @@ public class DrinkAdapter extends RecyclerView.Adapter<DrinkAdapter.AirViewHolde
 
         }
 
-        void bindTo(Drink currentAir){
+        void bindTo(AirMinum currentAir){
             mTitle.setText(currentAir.getTitle());
             mInfo.setText(currentAir.getInfo());
 
@@ -91,9 +91,10 @@ public class DrinkAdapter extends RecyclerView.Adapter<DrinkAdapter.AirViewHolde
 
         @Override
         public void onClick(View view) {
-            Intent detail = Drink.starter(mContext, mCurrentAir.getTitle(), mCurrentAir.getImage());
+            Intent detail = AirMinum.starter(mContext, mCurrentAir.getTitle(), mCurrentAir.getImage());
             detail.putExtra("title", txtTitle);
             mContext.startActivity(detail);
         }
     }
 }
+

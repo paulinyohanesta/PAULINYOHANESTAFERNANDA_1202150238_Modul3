@@ -1,4 +1,4 @@
-package com.adekraesa.android.PaulinYohanestaFernanda_1202150238_modul3;
+package com.example.win10.paulinyohanestafernanda_1202150238_modul3;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.adekraesa.android.PaulinYohanestaFernanda_1202150238_modul3", appContext.getPackageName());
+        assertEquals("com.example.win10.paulinyohanestafernanda_1202150238_modul3", appContext.getPackageName());
     }
 }

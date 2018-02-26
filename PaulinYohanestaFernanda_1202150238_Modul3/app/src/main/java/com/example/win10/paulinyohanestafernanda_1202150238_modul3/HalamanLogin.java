@@ -1,4 +1,4 @@
-package com.adekraesa.android.PaulinYohanestaFernanda_1202150238_modul3;
+package com.example.win10.paulinyohanestafernanda_1202150238_modul3;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class LoginActivity extends AppCompatActivity {
+public class HalamanLogin extends AppCompatActivity {
 
     private EditText vUser, vPassword;
     private Button vButton;
@@ -21,7 +21,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_halaman_login);
         Toast.makeText(this, "Selamat Datang!", Toast.LENGTH_LONG);
 
         //mengambil ID dari view
@@ -55,3 +55,4 @@ public class LoginActivity extends AppCompatActivity {
         return login;
     }
 }
+
